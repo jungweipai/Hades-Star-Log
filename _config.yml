@@ -1,0 +1,32 @@
+title: "我的长期日志与文章"
+description: "记录日常、学习与长期思考"
+lang: zh-CN
+timezone: America/Los_Angeles
+markdown: kramdown
+theme: minima
+
+# 让导航栏显示以下页面
+header_pages:
+  - journal.md
+  - articles.md
+  - about.md
+
+permalink: /articles/:year/:month/:day/:title/
+
+# 日志使用 Jekyll Collection；文章使用 _posts
+collections:
+  journal:
+    output: true
+    permalink: /journal/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: journal
+    values:
+      layout: post
